@@ -22,6 +22,8 @@
     bunch
     */
     let first = 10;
+    let First = "10";           // this is symbols/text/ STRING
+
     var second = "this is the second";
     let sum = 10 + 3;
     var x = 3;
