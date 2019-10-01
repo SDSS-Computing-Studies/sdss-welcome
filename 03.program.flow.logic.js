@@ -78,6 +78,8 @@ else
         if (x == 10) {
             console.log( "this statement is true")
         }
+
+        return true;
     }
     
 }
@@ -91,6 +93,8 @@ else
         }
         else
             console.log("This statement is false");
+        
+        return true;
     }
 }
 
@@ -105,5 +109,9 @@ else
             console.log("the second condition is true (x is negative");
         else
             console.log("x must be 0")
+
+        return true;
     }
 }
+
+ifexample()
