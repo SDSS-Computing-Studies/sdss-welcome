@@ -57,38 +57,35 @@ else
 
     >   checks to see if the left is greater than the right
         Note there is also a < operator
-        5 > 3
-        "a" > "b"
+        5 > 3               TRUE
+        "a" > "b"           FALSE
 
     >=  checks to see if the left is greater than or equal to the right
         Note there is also a <= operator
         The order is important, the = comes after the < or >
-        5 >= 5
-        5 >= 4
+        5 >= 5              TRUE
+        5 >= 4              TRUE
     
     !=  checks to see if things are not equal
-        3 != 2
-        5 != 5
+        3 != 2              TRUE
+        5 != 5              FALSE
        
 */}
 // IF example  function ifexample();
-{
     function ifexample() {
-        let x = 10;    
+        let x = 5;    
         if (x == 10) {
             console.log( "this statement is true")
         }
 
         return true;
     }
-    
-}
+
 
 // IF ELSE example function ifelse();
-{
     function ifelse() {
         let x = 5;
-        if (x ==2) {
+        if (x == 5) {
             console.log("This statement is true");
         }
         else
@@ -96,12 +93,10 @@ else
         
         return true;
     }
-}
 
-// IF ELSE ELSE example function ifelse2();
-{
+// IF ELSE IF example function ifelse2();
     function ifelse2() {
-        var x = 10;
+        var x = 0;
         if (x > 0) {
             console.log("the first condition is true (x is positive)")
         }
@@ -112,6 +107,5 @@ else
 
         return true;
     }
-}
 
-ifexample()
+ifelse2()

@@ -9,7 +9,8 @@ function pythagorean() {
     let b = 4;
 
     // Calculate the length of the hypotenuse
-    let c = Math.sqrt( Math.pow(a,2) + Math.pow(b,2) );
+    let c2 = Math.pow(a,2) + Math.pow(b,2)
+    let c = Math.sqrt( c2 );
 
     // Display the Output
     console.log("If the two short sides of the triangle measure " + a + " and " +b);
@@ -24,7 +25,7 @@ function rounded() {
     console.log("Rounded");
     console.log("=======")
 
-    let number = 10.334;
+    let number = 10.335;
     let rounded = number.toFixed(2);
 
     console.log("This is how the output should look");
@@ -53,9 +54,9 @@ function average() {
     let sum = a + b + c + d + e - highest - lowest;
     let average = sum / 3;
 
-    console.log("The average of the middle 3 numbers is" + average)
+    console.log("The average of the middle 3 numbers is " + average)
 }
 
-pythagorean();
-rounded();
+//.pythagorean();
+//rounded();
 average();
