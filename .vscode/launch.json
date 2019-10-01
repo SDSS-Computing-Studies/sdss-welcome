@@ -9,7 +9,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}\\02.prebuilt.functions.solutions.js"
+            "program": "${workspaceFolder}\\03.program.flow.logic.js"
         }
     ]
 }
