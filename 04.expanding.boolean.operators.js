@@ -29,6 +29,16 @@
 
         10 < x && x < 20
 
+        x = 11      true
+        x = 2       false 
+    
+    What about the statement:
+
+        10 < x || x < 20
+
+        x = 11      true
+        x = 2       true
+
     AND ( && ) is used when we want multiple conditions to be true
 
     OR ( || ) is used when only 1 of the conditions needs to be true
@@ -42,9 +52,9 @@
     Evaluate each of the following statements as true or false overall for the statements: a = 5, b = 2, c = -1, d = 0
 
     1. a < c && c != 0
-    2. a ==5 || d >= 0
+    2. a == 5 || d >= 0
     3. a > 2 && b > 0 && c < 0
-    4. (a > 2 ** b > 0) || d == 1
+    4. (a > 2 && b > 0) || d == 1
     5. d != 0 || c > 0
     
     Make up 5 more statements and test someone near you.
