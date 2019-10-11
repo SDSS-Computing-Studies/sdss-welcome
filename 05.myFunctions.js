@@ -56,26 +56,26 @@ function isEven(input) {
 
 
 {
-    var location = "nowhere";
+    var myLocation = "nowhere";
 
 
     function goStore() {
         console.log("You are at the store");
-        location = "Store";
+        myLocation = "Store";
     }
 
     function goHome() {
         console.log("welcome home");
-        location = "Home";
+        myLocation = "Home";
     }
 
     function goSchool() {
         console.log("You are at school");
-        location = "School";
+        myLocation = "School";
     }
 
     function whereAmI() {
-        console.log("You are at " + location);
+        console.log("You are at " + myLocation);
 
     }
 }
