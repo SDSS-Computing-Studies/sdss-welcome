@@ -38,8 +38,8 @@ function breakValues() {
     // this might be important if you have a bunch of code and don't want all of it
     // to be run 
 
-    let x = 2;
-    let y = 3;
+    let x = 0;
+    let y = -1;
     let z = 5;
 
     if (x > 1) {
@@ -64,7 +64,7 @@ function run(example) {
         //uncomment one of the following commands to test the different outputs
         // result = isEven("fred");
         // result = isEven(10);
-         result = isEven(11);
+         result = isEven("fred");
 
         console.log( result );
         return 1;

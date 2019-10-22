@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}\\07.function.return.values.js"
+            "program": "${workspaceFolder}\\06.worldExplore.js"
         }
     ]
 }
