@@ -79,7 +79,8 @@ function example2() {
 */
 example1();
 
-/* Great examples of switch statements:
+// Assignments
+{/* Great examples of switch statements:
     switch (mode) {
         case 'combat' : {
             doCombat(me,currOpponent);
@@ -101,7 +102,7 @@ example1();
         } break;
     }
 
-/*
+
 Assignments:
 Assignment 1:
 Store a number from 0 to 6 into a variable, to correspond with the day of the week.
@@ -122,4 +123,4 @@ Use a switch statement to determine the type of triangle and then state the main
 sample input: acute
 Result:
 An acute triangle has all angles less than 90 degrees.
-*/
+*/}
