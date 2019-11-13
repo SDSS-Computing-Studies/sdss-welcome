@@ -53,7 +53,7 @@ function dieRoll() {
     return roll;
 }
 
-for (let x = 1; x < 5; x = dieRoll() ) {
+for (let x = 1; x != 6; x = dieRoll() ) {
     console.log("doing the loop!")
 }
 
@@ -63,12 +63,18 @@ for (let x = 1; x < 5; x = dieRoll() ) {
 1.  Create a program that prints all of the even numbers less
 than n, where n is a variable that is defined at the start
 of the program.
+let n = 33;
 
-2.  Dsiplay the multiples of 9.  Use a variable assignment to 
+
+2.  Display the multiples of 9.  Use a variable assignment to 
 set the last factor of 9.
 eg:
 let last = 19
 this should print all the multiples of 9 from 9*1 to 9*19
+ 9 x 1 = 9
+ 9 x 2 = 18
+ ....
+ 9 x 19 = 171
 
 3.  Display all of the powers of 2 that are less than a
 number you specify at the start of your program:
@@ -93,3 +99,4 @@ money = 50;
 percentWin = 30;
 
 You do the rest!
+*/
