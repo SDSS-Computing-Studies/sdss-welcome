@@ -5,13 +5,13 @@
     options to choose from and the if/else structure becomes too complicated.
 */
 function example1() {
-    let input = 2;
+    let input = 4.1;
 
     switch (input) {
         case  1 :
             console.log("You entered a 1");
         break;
-        case 21 :
+        case 2 :
             console.log("You entered a 2");
             // notice the effect of the "break" statement.  It exits from the switch so that the next case 2: is ignored
         break;
@@ -29,6 +29,7 @@ function example1() {
         default:
             console.log("You entered a number bigger than 6");
     }
+    console.log("switch statement is complete");
 }
     
 
@@ -77,10 +78,11 @@ function example2() {
 
     }
 */
-example1();
+example2();
 
 // Assignments
 {/* Great examples of switch statements:
+
     switch (mode) {
         case 'combat' : {
             doCombat(me,currOpponent);
@@ -117,10 +119,11 @@ Sample input: 0
 Result: Sunday
 
 Assignment 2:
-Store a type of triangle into a variable (acute || right || obtuse)
+Store a type of triangle into a variable ( "acute" || "right" || "obtuse")
 Use a switch statement to determine the type of triangle and then state the main features of the triangle using console.log
 
 sample input: acute
+input = "acute";
 Result:
 An acute triangle has all angles less than 90 degrees.
 */}

@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}\\08.switch.case.js"
+            "program": "${workspaceFolder}\\09.star.system.js"
         }
     ]
 }
