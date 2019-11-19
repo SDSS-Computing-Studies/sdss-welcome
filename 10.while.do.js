@@ -87,7 +87,7 @@ Assignment #1 Newton's Method of Approximating roots
     x = 2
     xold = x
     y= 3*x*x*x + 2*x*x  - 4*x +1
-    dy = 9*x*x +5*x -4
+    dy = 9*x*x +4*x -4
     x = xold - y/dy
 
 
