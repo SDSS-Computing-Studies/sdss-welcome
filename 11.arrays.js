@@ -30,6 +30,7 @@
 
     example:
 */
+console.log("====================")
 console.log("example 1")
 let deck = [];
 deck[0] = "Ace";
@@ -60,8 +61,9 @@ Note that the first element in the array has an index of 0, not 1.
 
 ===========================================================================
 */
-
+console.log("====================")
 console.log("example 2");
+
 var score = []
 
 score[0]=20;
@@ -98,6 +100,7 @@ A better way is to use some of the specific array related methods/properties.
 One of these is the array.length; This will tell you how many elements are in the array:
 
 */
+console.log("====================")
 console.log("example 3");
 var score = []
 console.log(score.length);
@@ -121,6 +124,7 @@ end of the array, no matter how many elements you already have:
 
 
 */
+console.log("====================")
 console.log("example 4");
 var score = []
 
@@ -158,4 +162,4 @@ Assignments:
 5.  Same as #4, but sort all of the odd numbers into a separate array.
     You will need to use the modulus operator to help you determine the odd
     numbers.
-    
+*/
