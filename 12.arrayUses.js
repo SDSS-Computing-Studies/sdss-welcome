@@ -10,7 +10,7 @@ There are many different ways to sort an array. One way is the Bubble Sort:
 // Bubble Sort
 // A way to sort the values in an array
 
-console.log("The bubbtle sort!");
+console.log("The bubble sort!");
 console.log("=================");
 
 function displayArray(inputArray) {
@@ -20,6 +20,7 @@ function displayArray(inputArray) {
     }
     return output;
 }
+
 var numbers = [10,30,15,19,20,10,4,2,40,31,22];
 let output = displayArray(numbers);
 console.log("before" + output)
@@ -29,8 +30,8 @@ for (var i = 0; i < end; i++) {
 	for (var j = i; j < end; j++) {
   	if (numbers[i] > numbers[j]) {
     	var temp = numbers[i];
-      numbers[i] = numbers[j];
-      numbers[j] = temp
+        numbers[i] = numbers[j];
+        numbers[j] = temp
     }
   }
 }
@@ -65,9 +66,18 @@ var x = numbers2.splice(1,1);
 // this should remove the "30" at the second position
 // and store that value into x
 console.log("x:" + x);
+var hand = []
+
+hand.push(x);
+
+x = numbers2.splice(5,1);
+hand.push(x)
 
 output = displayArray(numbers2)
 console.log("after splice:" + output)
+
+output = displayArray(hand);
+console.log("generated array" + output)
 
 
 /*
@@ -75,10 +85,9 @@ Assignment:
 Create a shuffled deck of cards:
 Steps:
 1. Assign cards to an array of 52 elements
-2. Create a temporary array that is a copy of your unshuffled deck. This allows you to work with the deck elements without deleting/modifying your original deck.
-3. Select a card at random from the temp array. Remove it from the existing array and add it to a new array that represents your shuffled deck.
+3. Select a card at random from the deck. Remove it from the existing array and add it to a new array that represents your shuffled deck.
 4. Repeat this until you have no more cards in your original array.
-5. Display your shuffled deck.
+5. Display your shuffled deck ( a for loop with many console.log commands might be useful here)
 
 Bonus:
 Deal 5 cards to 4 different people and display what each person has.
