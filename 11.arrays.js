@@ -36,7 +36,8 @@ let deck = [];
 deck[0] = "Ace";
 deck[1] = "Blue";
 deck["green"] = "Red";
-console.log(deck["green"])
+console.log(deck[0])
+console.log("==============")
 
 /*  note that the index can be a word or a number.  Sometimes numbers are easier to work with
     because we can cycle through them with a for loop, but there are applications for both.
@@ -103,11 +104,12 @@ One of these is the array.length; This will tell you how many elements are in th
 console.log("====================")
 console.log("example 3");
 var score = []
-console.log(score.length);
+console.log( score.length );
 // this should show 0 because there are no elements
 
 score[ score.length ]=20;
 // this should enter 20 into score[0];
+// new score.length = 1
 
 score[ score.length ]=30;
 // this should enter 30 into score[1] because there
@@ -157,7 +159,6 @@ Assignments:
     var score = [6,1,29,11,3,4,6,3,34,65,34,23,4,2,4,67,2,3]
     Cycle through the elements of the array and store all of the numbers
     larger than 10 into a separate array.
-
 
 5.  Same as #4, but sort all of the odd numbers into a separate array.
     You will need to use the modulus operator to help you determine the odd
