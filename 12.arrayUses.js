@@ -85,7 +85,10 @@ Assignment:
 Create a shuffled deck of cards:
 Steps:
 1. Assign cards to an array of 52 elements
-3. Select a card at random from the deck. Remove it from the existing array and add it to a new array that represents your shuffled deck.
+2. Generate a random number corresponding to the number of cards in the deck
+3. Pull that card out of the deck and add it to another array
+4. Note, the number of cards is now less so you need to account for this when generating a random number
+    in step 2 for the next card
 4. Repeat this until you have no more cards in your original array.
 5. Display your shuffled deck ( a for loop with many console.log commands might be useful here)
 
