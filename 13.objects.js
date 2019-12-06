@@ -1,6 +1,32 @@
 // OBJECTS are BETTER than ARRAYS
 
 /*
+
+computer is an object
+
+computer.case
+computer.cpu
+- computer.cpu.brand = "amd"
+- computer.cpu.model = "ryzen"
+- computer.cpu.series = "2600x"
+
+note: 
+    computer.cpu.series 
+    is same/equivalent to
+    computer.cpu["series"]
+
+computer.ram
+- computer.ram.brand = "corsair"
+- computer.ram.type = "DDR4"
+- computer.ram.size = 16
+computer.gpu
+- computer.gpu.brand = "Asus"
+- computer.gpu.model = "ROG STRIX 2080Ti"
+computer.psu
+
+computer.mobo
+
+
 You can think about a car as an object. You can break it down into 
 pieces, like the interior, or the engine or the exterior. In turn, 
 each could be broken down into more pieces. For example, the interior 
@@ -58,8 +84,9 @@ myObject.name = "Grass";
 myObject.color = "green";
 myObject.value = 3.25;
 
-console.log(myObject);
+
 console.log(myObject.name);
+console.log(myObject.color);
 
 console.log('=================================================');
 
@@ -85,7 +112,19 @@ var myChar = {
     weapon : 3
 }
 
+var sidekick = {
+    name : "George",
+    type : "Titan",
+    maxHP : 1000,
+    currHP : 900,
+    attack : 200,
+    defense : 100,
+    weapon : 30
+}
+
 console.log("Character's name is " + myChar.name)
+
+console.log("Sidekick is named " + sidekick.name)
 console.log("Class:" + myChar.type);
 console.log("==")
 displayAll(myChar);
