@@ -18,13 +18,16 @@ defined as being within the object.
 x =  Math.round(12.3);
 console.log(x);
 
-y = round(12.4);
+y = Math.round(12.4);
 console.log(y);
 
 /* To create your own functions/methods within an object, you need to declare your
 function a bit differently than you normally might:
 
 */
+function dothis(inputs) {
+
+}
 
 var game = {
     hp : 10,
@@ -48,6 +51,15 @@ copy and paste this to a Broswer console to try using the function commands
 */
 
 /* Assignment:
+
+We will add a game object using
+
+var game = {
+
+}
+
+You will add the character object and monster object to your game object 
+
 We will extend the game that program that you started building last class with the monster 
 and the character.
 
@@ -56,7 +68,7 @@ Add the following function methods:
 display() - will display the current status of both the character and the monster.
             HP is very important for this function
 
-isHit(attacker,defender)
+isHit(attacker THAC0,defender AC)
         - uses the attacker THAC0 and compares it with the defender AC to
         determine if the target is hit.
         - generate target number as THAC0 - AC
