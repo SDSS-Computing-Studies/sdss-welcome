@@ -24,6 +24,10 @@ var word = "?hello";
 var first = word.substring(0,1);
 var end = word.substring(1,word.length);
 
+if (first == "?") {
+    // do something with end
+}
+
 // In this example we take a substring that starts at the 1st letter of the word (position 0)
 // and ends at the 2nd letter of the word (position 1)
 // Thus "?" is stored into first
@@ -34,6 +38,12 @@ var end = word.substring(1,word.length);
 // eg t!daily
 // eg t!balance
 // eg t!train
+
+word = "t!daily";
+first = word.substring(0,2)
+if (first == "t!") {
+    // do something with the rest
+}
 // the bot should run a check on every message to see if the right command has been
 // issued and then parse the rest of the message
 
@@ -60,3 +70,11 @@ var arguments = command.split(' ');
 // In this method, we can check to see if the first argument is the right command word
 // we might then look at arguments 1 and 2 to see what the bot needs to do
 
+if (arguments[0] == "copper") {
+    switch ( arguments[1] ) {
+        case "train" :
+            break;
+        case "feed" :
+            break;
+    }
+}
