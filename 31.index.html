@@ -1,0 +1,22 @@
+<style>
+    i {
+       font-style : normal;
+       font-weight: bold;
+       color: blue;
+
+    }
+</style>
+
+
+<p id="p1">This is a <i id="test">sample</i> html document.</p>
+
+<p>This is supposed to be a second line.</p>
+
+
+<script>
+    var x = document.getElementById("test");
+    x.innerHTML = "new";
+
+    var y = document.getElementById("p1");
+    y.innerHTML = "This paragraph replaces the original paragraph";
+</script>
