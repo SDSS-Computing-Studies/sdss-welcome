@@ -2,16 +2,16 @@
 <html>
 
 <head>
-    <title>Styles:  Changing the Look of a Page!</title>
+    <title>Styles: Changing the Look of a Page!</title>
 
     <style>
         /*  Styles may be commented using containers */
         /*  Styles consist of an identifier and then the styles
-                All of the styles to apply to that identifier are in the format
-                
-                style : property;
-
-                */
+                    All of the styles to apply to that identifier are in the format
+                    
+                    style : property;
+    
+                    */
         /*  The identifier may apply to all of the tags of specific type */
         i {
             color: purple;
@@ -19,8 +19,8 @@
         }
 
         /*  The identifier may apply to all of a class or all of a class
-                of a particular container
-            */
+                    of a particular container
+                */
 
         i.uline {
             /* targets all i tags with class "uline" */
@@ -29,7 +29,7 @@
 
         .uline {
             /* targets any class "uline" regardless of tag */
-            text-decoration: underline;
+            text-decoration: overline;
         }
 
         /* May apply to a specific element by it's ID */
@@ -41,19 +41,21 @@
         }
 
         div.border {
-            border-width: 1px;
-            border-color: black;
+            border-width: 3px;
+            border-color: blue;
             border-style: double;
-            border-radius: 4px;
+            border-radius: 10px;
+            width: 200px;
+            box-shadow: 10px 20px 50px #44ddee;
         }
 
         h1 {
-            font-size: 1.4em;
+            font-size: 1.3em;
             font-family: Arial;
         }
 
-        body { 
-            background-color: rgba(148, 142, 142, 0.822)
+        body {
+            background-color: #ffcccc;
 
         }
     </style>
@@ -67,12 +69,12 @@
                 on the page my dictate when the script is executed in relation
                 to when the items on the page are added.
     </script>
-    <p>A few things that you may want to consider when working with a website.  A web url has important parts
+    <p>A few things that you may want to consider <i>when working with a website</i>. A web url has important parts
         <ul>
-        <li>Protocal (http</li>
-        <li>Address (copper.hungrybeagle.com)</li>
-        <li>Directory /</li>
-        <li>Filename /index.html</li>
+            <li>Protocal (http</li>
+            <li>Address (copper.hungrybeagle.com)</li>
+            <li>Directory /</li>
+            <li>Filename /index.html</li>
         </ul>
         Example: http://copper.hungrybeagle.com/files/index.html
     </p>
@@ -81,7 +83,7 @@
         that all of the formatting is dictated by html markup tags and the styles that
         are applied to them.</p>
 
-    <p>Styles are extremely important.  Styles are how we can change the look of a document.
+    <p>Styles are extremely important. Styles are how we can change the look of a document.
         A style can even make a page look like an application on a mobile device</p>
 
     <p>You should pay attention to how an <i class="uline">html tag</i> becomes part of a class,
@@ -138,5 +140,3 @@
         */
     </script>
 </body>
-
-
