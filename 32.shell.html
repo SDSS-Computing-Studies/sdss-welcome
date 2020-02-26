@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Styles:  Changing the Look of a Page</title>
+
+    <style>
+        /*  Styles may be commented using containers */
+        /*  Styles consist of an identifier and then the styles
+                All of the styles to apply to that identifier are in the format
+                
+                style : property;
+
+                */
+        /*  The identifier may apply to all of the tags of specific type */
+        i {
+            color: green;
+            font-weight: bold;
+        }
+
+        /*  The identifier may apply to all of a class or all of a class
+                of a particular container
+            */
+
+        i.uline {
+            /* targets all i tags with class "uline" */
+            text-decoration: underline;
+        }
+
+        .uline {
+            /* targets any class "uline" regardless of tag */
+            text-decoration: underline;
+        }
+
+        /* May apply to a specific element by it's ID */
+        #myId {
+            border-width: 1px;
+            border-color: black;
+            border-style: solid;
+            border-radius: 3px;
+        }
+
+        div.border {
+            border-width: 1px;
+            border-color: black;
+            border-style: double;
+            border-radius: 4px;
+        }
+
+        h1 {
+            font-size: 1.4em;
+            font-family: Arial;
+        }
+
+        body {}
+    </style>
+    <script>
+    </script>
+</head>
+
+<body>
+    <script>
+        /*  A script container may be placed anywhere.  Note that it's position
+                on the page my dictate when the script is executed in relation
+                to when the items on the page are added.
+    </script>
+
+    <p id="myId">The body of your document is where you should put all of your container tags. Note
+        that all of the formatting is dictated by html markup tags and the styles that
+        are applied to them.</p>
+
+    <p>Styles are extremely important.  Styles are how we can change the look of a document.
+        A style can even make a page look like an application on a mobile device</p>
+
+    <p>You should pay attention to how an <i class="uline">html tag</i> becomes part of a class,
+        as well as how the classes are <b class="uline">important</b> for defining styles</p>
+
+    <p>Some of the important tags that you can use are the &lt;p&gt; tag, the &lt;div&gt; tag and
+        the &lt;span&gt; tag.</p>
+
+    <div>The div tag creates a specific section, much like a paragraph.
+        It will have space between the sections much like a paragraph will.
+        What is the difference between them? Not much. It's more or less just
+        a reference to their function</div>
+    <p>Some new tags that were included have similar function...the &lt;section&gt; tag
+        and the &lt;nav&gt; tag do the same things, but have different names to help
+        make tags within tags less confusing.</p>
+
+    <div class='border'>The &lt;span&gt; tag is also a <span class="uline">container</span>, but is intended for doing
+        things inline
+        instead of in a paragraph.</div>
+
+    <h1>Assignment</h1>
+    <ol>
+        <li>If you do not already have the Visual Studio Code extension "Beautify File" loaded,
+            loaded it an install it. This will help make your code much more readable. There
+            are also a number of "live Preview" extensions that you may want to try out as well.
+            This can save you switching tabs to go to a browser and reloading the browser page.</li>
+        <li>Create a blank html shell in a document called "assign1.html". This should have all of
+            the important containers that you see on this page.</li>
+        <li>Find some text that you will be marking up today. It can be from any page,
+            but it should be several paragraphs in length. Copy only the text and paste
+            it into your document.</li>
+        <li>Experiment with some of the ways to apply styles to html tags. You must include the
+            following:
+            <ul>
+                <li>Matching closing tags for every opening tag</li>
+                <li>A style defined for all tags on a page</li>
+                <li>A style defined for 2 different classes on your page</li>
+                <li>A style defined for a class that applies only to a specific tag.
+                    Do two fo these as well</li>
+                <li>A style that redefines an italic &lt;tag&gt; to instead be normal
+                    text but colored purple</li>
+            </ul>
+        <li>Note: You may need to look up some of the specific syntax for applying a style
+            property. Google is your friend here. There are many questions that have been
+            answered for questions like "css style green text". Basically, if there's a style
+            that you want to apply, a style exists for it already.</li>
+    </ol>
+    <script>
+        /*  Javascript may come at the end of the page.  This means that the
+            scripts won't be executed until the page has been defined.  
+            This is especially important if you have scripts that make use of
+            the elements that are defined on the page.  There
+            are other ways to get around this problem as well.
+        */
+    </script>
+</body>
+
+
