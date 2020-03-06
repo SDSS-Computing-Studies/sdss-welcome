@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+
+<head>
+    <style>
+        div#app {
+            position: absolute;
+            border: 1px solid black;
+            width: 500px;
+            height: 300px;
+            left: 300px;
+            top: 100px;
+            background-color: white;
+            z-index: 1;
+            box-shadow: 5px 10px 30px #666666;
+        }
+
+        div#assignment {
+            position: absolute;
+            border: 1px solid black;
+            width: 600px;
+            height: 500px;
+            left: 340px;
+            top: 70px;
+            padding-left: 10px;
+            padding-right: 10px;
+            background-color: white;
+            z-index: 0;
+            cursor: default !important;
+            box-shadow: -10px 10px 30px #666666;
+        }
+
+        div#first {
+            position: absolute;
+            top: 80px;
+            width: 300px;
+            right: 0px;
+            border: 1px solid green;
+        }
+
+        div#second {
+            position: absolute;
+            top: 70px;
+            width: 120px;
+            left: 5px;
+            border: 2px double pink;
+        }
+
+        div#third {
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            left: 5px;
+            border: 3px double blue;
+            padding: 4px;
+            height: 60px;
+        }
+
+        p.list {
+            margin-left: 10px;
+        }
+
+        button {
+            background-color: #ffffbb;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").on("click", clicked)
+            $("button").on("mouseover", m_over)
+
+            $("div#assignment").on("click", c_assign);
+        })
+
+        function c_assign(e) {
+            var el = document.getElementById("assignment");
+            var zindex = $("#assignment").css("z-index");
+            if (zindex == 0) {
+                zindex = 2;
+                cursor = "";
+            } else {
+                zindex = 0;
+                cursor = "default";
+            }
+            var errorCheck = $("#assignment").css("z-index", zindex);
+            var errorCheck = $("#assignment").css("cursor", cursor)
+        }
+
+        function clicked(e) {
+            alert("button with id of " + e.target.id + " clicked");
+        }
+
+        function randomcolor() {
+            var colors = ["white", "red", "green", "blue", "purple", "yellow"];
+            var index = Math.floor(Math.random() * colors.length);
+            return colors[index]
+        }
+
+        function m_over(e) {
+            $("button#" + e.target.id).css("background-color", randomcolor())
+        }
+    </script>
+</head>
+
+<body>
+    <div id="app">
+        This div element is placed using absolute. It is child to the body, so it's absolute
+        position is relative to the whole body. (left 300px, top 500px)
+        <div id="first">
+            This elemnt is placed using absolute. It is child to the main div element, so it's
+            absolute position is within its parent element.
+            <button id="button2">Clickable button</button>
+            <button id="button3">Clickable button</button>
+            <button id="button4">Clickable button</button>
+            <button id="button5">Clickable button</button>
+            <button id="button6">Clickable button</button>
+        </div>
+        <div id="second">
+            This element is also placed inside the main div using absolute. It's position is also
+            relative to the main div
+        </div>
+        <div id="third">
+            This element is like the first and second, except that it has a padding style applied.
+            What do you think the padding style does? Note that width 100% and padding does not play
+            well with fitting inside the parent...
+        </div>
+    </div>
+    <div id="assignment">
+        <b>Click to see/hide me!</b>
+        <p>Today you will be using styles to create blocks of code that can be positioned
+            around the page. You will be creating a layout for your form or creating a
+            new one for extra practice!</p>
+        <p>It is a good idea to create a main element that will set the limits of your form.
+            Then all of your new elements and sections can be placed within the limits of this border.</p>
+        <p>Another good idea is to add borders around all of your elements when you are placing them;
+            they can always be removed later, but it will help you visualize where they are to make
+            sure that you have not made errors in your code.</p>
+        <p><b>Assignment A</b> Create a layout for your current form that you created last day.</p>
+        <p><b>Assignment B</b> Use styles to duplicate a character sheet (or the top half of a 
+        character sheet) from a Role Playing Game. Some examples of images you can use are included below:</p>
+        <p class="list">
+            <ul>
+                <li><a href="https://www.google.com/search?q=dungeons+and+dragons+character+sheet&tbm=isch&chips=q:dungeons+and+dragons+character+sheet,g_1:fillable:kXyTqFU8WX4%3D&hl=en-US&ved=2ahUKEwi0i8Sg2oToAhVYlp4KHbZGAWEQ4lYoBXoECAEQHg&biw=1168&bih=646" target="new">Open D&D sheets in a new window</a></li>
+                <li><a href="https://www.google.com/search?q=traveller+character+sheet+images" target="new">Traveller Sheets (open in a new window)</a></li>
+
+            </ul>
+        Note: You don't have to include any of the artistic shapes, just position the elements.  You
+        may need a LOT of elements to complete this.  
+    </div>
+
+</body>
