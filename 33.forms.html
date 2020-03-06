@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Adding form Elements</title>
+        <style>
+            input.stbut {
+                border: 4px double black;
+                border-radius: 8px;
+                padding: 5px;
+                background-color: #ddee33;
+                box-shadow: 4px 3px 8px #888888;
+            }
+            input.stbut:active {
+                background-color: #aabb00;
+                
+            }
+            input.stbut:focus {
+                outline: 0 !important;
+            }
+
+            input.sttext {
+                width: 150px;
+                background-color: #ddddff;
+                padding: 2px;
+                color: #ff0000;
+                font-weight:bold;
+
+            }
+        </style>
+        <script>
+        </script>
+
+    </head>
+    <body>
+        <p>Forms are what we refer to as elements that can create input.  They generally consist of buttons, checkboxes, radio buttons, drop down menus (select boxes),
+        and text input fields.  There are also hidden input elements, and elements that will only accept phone numbers, or emails, or dates, but these are just
+        really variations of input fields:</p>
+        <p>Note that form elements do not have to be container tags.  In fact, with new javascript and css, they actually don't even have to be
+            form elements, but we continue to use form tags as they are a good starting point that helps us keep the names and functions associated.
+        </p>
+        <input type="date" value="This is a text input"><br>
+        <input type="button" value="This is a button"><br>
+        <input type="checkbox">This is a checkbox.<br>
+        <input type="radio">This is a radio button<br>
+        <select>
+            <option>Select box</option>
+            <option>option2</option>
+        </select><br>
+        <button>A button can also be a container tag</button>
+        <textarea>This is a text area (multiple line input)</textarea>
+        <p>Note form that elements can be styled as well</p>
+        <input type="button" value="Styled button" class="stbut"><br>
+        <input type="text" class="sttext">
+        <h5>Assignment</h5>
+        <p>Create a form to receive some data from a user.  Don't be too concerned about the layout, but you want to make sure that you are receiving
+            all the information that you might need.  Some suggestions:
+            <ol>
+                <li>A page to add your dog to the database for a city dog registry</li>
+                <li>An input form to receive the marks for your report card</li>
+                <li>A job application form including necessary personal data along with other requirements an employer might need</li>
+                <li>RPG Character Data Sheet</li>
+            </ol>
+            <b>Again, don't be too concerned with the layout; today is about adding in all of the necessary form fields that you need for your document. We will begin
+                looking at layout and placement of content in the next lessons. 
+
+            </b>
+        </p>
+
+
+        
+
+    
+    </body>
+</html>
