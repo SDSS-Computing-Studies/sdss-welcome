@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+<head>
+    <style>
+        div#app {
+            position: absolute;
+            border: 1px solid black;
+            width: 200px;
+            height: 300px;
+            left: 300px;
+            top: 200px;
+
+        }
+
+        .top {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            margin: auto;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready( function() {
+            $("button").on("click",clicked)
+            $("button").on("mouseover",mover)
+        }) 
+
+        function clicked(e) {
+            alert("button with id of " + e.target.id + " clicked");
+        }
+
+        function randomcolor() {
+            var colors = ["white","red","green","blue","purple","yellow"];
+            var index = Math.floor(Math.random()*colors.length);
+            return colors[index]
+        }
+        function mover(e) {
+            $("button#"+e.target.id).css("background-color",randomcolor())
+        }
+    </script>
+</head>
+
+<body>
+    <div id="app">
+        <div class="top">
+            <button id="button2">Clickable button</button>
+            <button id="button3">Clickable button</button>
+            <button id="button4">Clickable button</button>
+            <button id="button5">Clickable button</button>
+            <button id="button6">Clickable button</button>          
+        </div>
+</body>
