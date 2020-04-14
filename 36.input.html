@@ -1,0 +1,66 @@
+<!doctype html>
+<head>
+    <title>Retrieving User Input</title>
+    <script>
+    
+    document.addEventListener("DOMContentLoaded", function(event) { 
+        // note...this is actually also an "event hanlder".  When the document content is loaded, then this
+        // code will execute.  If it doesn't wait, then the document objects haven't been created yet, and this
+        // creates errors trying to reference objects that are not defined until later on.
+
+        // Code Sample #1
+        var promptButton = document.getElementById("promptButton")
+        promptButton.addEventListener('click', getPrompt);
+
+        function getPrompt(e) {
+            var data = prompt("Enter some data");
+            console.log(data);
+
+            return data;
+        }
+
+        // In this code sample, a variable is created to store the id of the element we want to watch
+        // an event handler listens for when the element is "clicked", at which point it runs a call back
+        // function called getPrompt.  It is called a callback function because it includes 1 input object:
+        // the event itself. That information is all passed to the function as an input parameter called "e",
+        // which isnt' really used in the function, but could be.  It would list all kinds of information about
+        // the event itself.  You can access it by changing the line "console.log(data) to console.log(e)"
+        // note that in the function the prompt is created, and the data is stored into the variable data
+        // end Code Sample #1
+
+        // Begin Code Sample #2
+        var inputButton = document.getElementById("inputButton");
+        inputButton.addEventListener("click",getInput)
+
+        function getInput(e) {
+            var inputText = document.getElementById("inputText");
+            var data = inputText.value;
+            console.log(data);
+        }
+
+        // Note that in this code sample, we need to retrieve the value that is stored inside
+        // the input element.  In this case, we treat it like an object.  It has a value, and
+        // the value will read the text that is inside it!
+        // end Code Sample #2
+    });
+    </script>
+</head>
+
+<body>
+    <div>There are many ways to retrieve user input.  One of them is to use native javascript prompts:<br>
+        <input type="button" id="promptButton" value="Click to open prompt"><br>
+        A key here is that you may need to use an "Event Handler" to see if the button here has been clicked,
+        and when it has, run the code that creates the prompt.  Note that the prompt follows the rules for a 
+        function - what is retrieved from the function is returned as output that can be stored in a variable.
+        (see Code Sample #1 in the Javascript in the head of this document)
+    </div>
+    <hr>
+    <div>A second way is to use input from forms.  A basic input is to use the textbox:<br>
+        <input type="text" id="inputText">
+        <input type="button" id="inputButton" value="Click to retrieve value of text element">
+        <br>
+        A second way is to use an input field in the document itself to create a virtual "form" that is displayed.
+        Much of the same structure for an event handler is used, but we need to retrieve the values from the input 
+        element instead of creating a prompt. (see Code Sample #2)
+    </div>
+</body>
