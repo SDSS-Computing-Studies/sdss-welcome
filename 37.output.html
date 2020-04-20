@@ -1,0 +1,81 @@
+<!doctype html>
+<head>
+    <title>Updating a webpage dynamically</title>
+    <style>
+        #explanation {
+            visibility: hidden;
+            width: 500px;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) { 
+            var myButton = document.getElementById("click");
+            myButton.addEventListener("click",update);
+        })
+
+        function update(el) {
+            var target = document.getElementById("content");
+            var newContent = "Ta Da! The contents of this page have been changed!";
+            newContent += "<hr>";
+            newContent += "Note that we can also change the style of this container.<br>";
+            newContent += "And we can add quite a bit of content by using the += operator<br>";
+            newContent += "Each style property is changed with a different variable";
+            target.innerHTML = newContent;
+            target.style.border = "1px solid green";
+            target.style.width = "500px";
+            target.style.padding = "5px";
+            target.style.textAlign = "center";
+
+            var hiddenBlock = document.getElementById("explanation")
+            hiddenBlock.style.visibility = "visible";
+        }
+    </script>
+</head>
+<body>
+    <div id="content">
+        Take a look at this page.  It is a typical webpage with content
+    </div>
+    <input type="button" id="click" value="Now Click This Button">
+    <div id="explanation">
+        <font class="title">How does this work?</font><br>
+        
+        <ul>
+            <li>
+                The document has 2 div tags, one that is identified as "content"
+                and one that is identified as "explanation". Explanation has a
+                style applied to it to make it invisible at the start.
+            </li>
+            <li>
+                An event handler is created to wait for the page to load.
+                The event handler listens for a click event on the button. Once
+                the button is clicked, the function "update" is called
+            </li>
+            <li>
+                In the update function, the target element (the one that we are 
+                going to update the content for) is identified. This is the one 
+                whose HTML content is going to be changed.
+            </li>
+            <li>
+                We could write the changes directly, but we have a lot of
+                text that we're going to add, so we are going to create 
+                a variable to store the changes, and then add onto the 
+                variable using the += operator
+            </li>
+            <li>
+                Once we have our content stored in a variable, we'll assign 
+                that directly to a property of our ID object, using the 
+                "innerHTML" property
+            </li>
+            <li>
+                Each style property is updated directly using variables.
+                Sometimes, you'll need to hunt around to find out what the 
+                name of the actual property you want to change is called,
+                but some code editors like Microsoft Visual Studio Code can 
+                help you with autocompletion and suggestions.
+            </li>
+            <li>
+                The hidden block has its visibility style changed to make it visible!
+            </li>
+        </ul>
+    </div>
+</body>
