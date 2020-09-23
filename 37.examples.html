@@ -1,0 +1,44 @@
+<!doctype html>
+<head>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var buttonID = document.getElementById("myButton");
+
+            buttonID.addEventListener("click", doButton)
+        })
+
+        function doButton(e) {
+            var data = document.getElementById("myInput").value;
+            document.getElementById("secondCell").innerHTML = data;
+
+            
+        }
+
+    </script>
+    <style>
+        table {
+            border: 1px solid black;
+        }
+        td {
+            border: 1px solid black;
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Sample dynamically updating a page</h3>
+
+    <div id=inputLayer>
+        <input type="text" id="myInput">
+        <input type="button" value="Click to input" id="myButton">
+    </div>
+
+    <table>
+        <tr>
+            <td id=firstCell><i>italics</i> a</td>
+            <td id="secondCell">b</td>
+        </tr>
+    </table>
+
+</body>

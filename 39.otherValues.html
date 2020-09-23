@@ -1,0 +1,103 @@
+<!doctype html>
+<head>
+    <title>Obtaining Values from other HTML Elements</title>
+</head>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+            // Part I Event Handlers
+            document.getElementById("go").addEventListener("click",run)
+            document.getElementById("checkbutton").addEventListener("click",runChecks)
+
+            // Part II Event Handlers
+            document.getElementById("numberButton").addEventListener("click",getNumber);
+    })
+
+    function run() {
+        // for Part I : Reading values of input elements
+        console.log("\n\nDisplaying the values of all elements")
+        console.log(document.getElementById("select").value)
+        console.log(document.getElementById("check").value)
+        console.log(document.getElementById("radio").value)
+        console.log(document.getElementById("range").value)
+        
+    }
+
+    function runChecks() {
+        // for part I : Reading "Checked" state of input radio and checkboxes
+        console.log("\n\nDisplaying Checkbox and Radiobox states")
+        console.log(document.getElementById("check").checked)
+        console.log(document.getElementById("radio").checked)
+        console.log("note that the values are read as either true or false and not \"true\" or \"false\".  These are boolean values")
+    }
+
+    function getNumber() {
+        // for Part II : reading numbers from inputs
+
+        var num = document.getElementById('number').value;
+        var intValue;
+        var floatValue;
+
+        // note we have read in the value of the textbox, but it
+        // is a symbol right now.  We can show this by trying to
+        // add it to another number:
+        console.log("==========")
+        console.log( "num + 10 : this does not add 10 to the value, but instead joins them together")
+        console.log( num + 10)
+
+        intValue = parseInt(num);
+        console.log("\n\nUsing parseInt(string) to convert the word to an integer")
+        console.log( intValue + 10)
+
+        floatValue = parseFloat(num)
+        console.log("\n\nUsing parseFloat(string) to convert the word to a decimal")
+        console.log( floatValue + 10)
+
+    }
+</script>
+    
+<body>
+    <h4>Code needed for this assignment, part I</h4>
+    <div class="content">
+        You may recall that <input type="text" value="input boxes"> are one way of retrieving
+        data from a form.  However, there are<br> 
+        <select id="select">
+            <option value="option1">select boxes/drop down dialogs</option>
+            <option value="option2">another</option>
+        </select><br>
+        as well as<br>
+        <input type="checkbox" id="check" value="checkbox Checked">checkboxes,<br>
+        <input type="radio" id="radio" value="radio Yes">radio boxes, 
+        and even<br>
+        <input type="range" id="range">sliders.
+        <br>
+        <input type="button" value="Click to read values" id="go"><br>
+        Values will be read into your console.  Note that your radio and checkbox 
+        values always show the same regardless of whether it is checked or
+        unchecked!  That is because the value and the checked state are tracked
+        by 2 differet properties.
+    </div>
+    <br>
+    <div>
+        <input type="button" value="Log the checked states" id="checkbutton"><br>
+        This button will run a different function that displays the checked 
+        state of the radio and checkbox using the ".checked" property of the 
+        element.
+    </div>
+    <br>
+    <h4>Code needed for this assignment, Part II</h4>
+    <div>
+        <input type="text" id="number">
+        <input type="button" id="numberButton" value="Use numbers"><br>
+        One of the cautions when using an input text box is that 
+        values inside the textbox are treated as text symbols,
+        even if they contain nothing but number symbols.  For 
+        example, if you enter 34 into the textbox, instead of
+        having a numerical value of 34, it will think it is the 
+        symbols "34" and that it is Not a Number (NaN).  We need 
+        to convert the symbol into a numerical value, but fortunately
+        there are functions to do that for us.  Look for the 
+        getNumber() function in our code to see how it can be used.<br>
+        Note that if the symbols cannot be converted to numbers,
+        they store a value of "NaN" (not a number)
+    </div>
+</body>

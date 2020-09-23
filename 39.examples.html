@@ -1,0 +1,38 @@
+<!doctype html>
+<head>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("myTest").addEventListener("click",bClicked)
+        })
+
+
+        function bClicked() {
+            var target = document.getElementById("textBox");
+            var content = target.value;
+
+            var checktarget = document.getElementById("check1");
+            var checkContent = checktarget.checked;
+            
+            var radiotarget = document.getElementById("radio1");
+            var radioContent = radiotarget.checked;
+            
+
+            console.log(content);
+            console.log(checkContent);
+            console.log(radioContent);
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" id="myTest" value="clickMe"><br>
+    side 1 <input type="text" id="textBox">
+    side 2<input type="text" id="textBox">
+    <p>
+        <input type="checkbox" id="check1"> Check1 <br>
+        <input type="radio" id="radio1" name="human" value="num1"> Radio1 <br>
+        <input type="radio" id="radio2" name="human" value="num2"> Radio1 <br>
+        <input type="radio" id="radio3" name="human" value="num3"> Radio1 <br>
+        
+    </p>
+</body>
